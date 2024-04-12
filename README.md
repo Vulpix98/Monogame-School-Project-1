@@ -5,6 +5,10 @@ Original repository: [The-Horde](https://github.com/MohamedAG2002/The-Horde)
 
 From: [MohamedAG2002](https://github.com/MohamedAG2002) 
 
+Alunos:
+* Leonel Oliveira - 22522
+* José Abreu - 22532
+
 # Correção de erros:
 
 O projeto em si vinha com 3 erros, mas eram do mesmo tipo.
