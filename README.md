@@ -19,7 +19,9 @@ Todo o jogo é controlado através do teclado, incluído o menu.
 
 Para jogar é utilizado o `WASD` ou `Teclas das setas`. Para mudar de arma `Q` ou `E`, `Q` para a pistola e o `E` para a caçadeira. Para disparar `Espaço`.
 
-No menu, as diferentes opções tem a sua designada tecla ao lado. `Enter` para jogar. `H` para o ecrã de ajuda. `C` para o ecrã de créditos. `ESC` para fechar o jogo, mesmo quando se está a jogar. `M` para voltar para o menu.
+No menu, as diferentes opções tem a sua designada tecla ao lado. `Enter` para jogar. `H` para o ecrã de ajuda. `C` para o ecrã de créditos. `ESC` para fechar o jogo, mesmo quando se está a jogar. `M` para voltar para o menu. 
+
+Outros controlos.`R` recomeçar um novo jogo, unicamente no ecrã de fim de jogo. `P` para colocar o jogo em pausa e retomar de pausa.
 
 # Correção de erros:
 
