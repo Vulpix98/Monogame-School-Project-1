@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Audio/barricade_hit.wav</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Audio/basic_zombie.wav</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Audio/brute_zombie.wav</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Audio/denizen_zombie.wav</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Audio/pistol.wav</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Audio/shotgun.wav</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Audio/zombie_death.wav</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Font/font_large.spritefont</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Font/font_medium.spritefont</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Font/font_small.spritefont</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Gui/colt_45.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Gui/pump_action_rifle.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Maps/prop_map.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Maps/tile_map.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Sprites/basic_zombie.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Sprites/brute_zombie.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Sprites/denizen_zombie.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Sprites/pistol_bullet.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Sprites/player.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Sprites/shootgun_shell.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Tiles/box_1.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Tiles/box_2.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Tiles/flower_1.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Tiles/flower_2.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Tiles/grass_patch.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Tiles/grass.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Tiles/rock.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Tiles/withered_bush.png</File>
+    <File>C:/Users/josep/OneDrive/Ambiente de Trabalho/escola/Lice_Jogos/Tecnicas_Dev_Jogos/The-Horde-master/Content/Tiles/withered_grass.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

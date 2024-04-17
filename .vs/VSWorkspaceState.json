@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\Entities",
+    "\\src\\Enums",
+    "\\src\\Managers",
+    "\\src\\Scenes",
+    "\\src\\Tiles"
+  ],
+  "SelectedNode": "\\src\\Entities\\Bullet.cs",
+  "PreviewInSolutionExplorer": false
+}
