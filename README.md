@@ -33,7 +33,7 @@ O problema é que ao dar build o compilador não identificava as fontes.
 
 Para resolver apenas baixei a Font neste caso `Bit5x3` e coloquei dentro da pasta onde fica as fontes dei build e problema resolvido.
 
-#Estrutura/Organização
+# Estrutura/Organização
 
 A forma como o código está estruturado, faz com que se torne simples e rápido o seu entendimento, ao ler as várias linhas de código.
 
