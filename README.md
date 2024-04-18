@@ -44,5 +44,11 @@ Como também a organização das `pastas/ficheiros` de cada classe que represent
 
 ![Screenshot_2](https://github.com/Vulpix98/Monogame-School-Project-1/assets/75589500/1b1eba02-8157-4d9e-9681-0706071ef994)
 
+</br>
+<strong>Exemplo de um `ficheiro de código`</strong>
+</br>
+
+![Screenshot_3](https://github.com/Vulpix98/Monogame-School-Project-1/assets/75589500/a61e14c9-600a-4c74-8f5c-678a194a77e4)
+
 
 
