@@ -27,7 +27,7 @@ Outros controlos. `R` recomeçar um novo jogo, unicamente no ecrã de fim de jog
 
 O projeto em si vinha com 3 erros, mas eram do mesmo tipo.
 </br>
-O erro estava localizado na pasta `Content\Font` 
+O erro estava localizado na pasta `Content\Font`.
 </br>
 O problema é que ao dar build o compilador não identificava as fontes.
 </br>
@@ -38,6 +38,8 @@ Para resolver apenas baixei a Font neste caso `Bit5x3` e coloquei dentro da past
 A forma como o código está estruturado, faz com que se torne simples e rápido o seu entendimento, ao ler as várias linhas de código.
 </br>
 Como também a organização das `pastas/ficheiros` de cada classe que representa cada elemento essencial do jogo, da a sensação de algo limpo.
+</br>
+![Screenshot_2](https://github.com/Vulpix98/Monogame-School-Project-1/assets/75589500/1b1eba02-8157-4d9e-9681-0706071ef994)
 
 
 
