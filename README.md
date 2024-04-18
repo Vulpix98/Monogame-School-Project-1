@@ -47,5 +47,17 @@ Como também a organização das `pastas/ficheiros` de cada classe que represent
 
 ![Screenshot_3](https://github.com/Vulpix98/Monogame-School-Project-1/assets/75589500/a61e14c9-600a-4c74-8f5c-678a194a77e4)
 
-<a href="Estrutura/Organização">Teste</a>
 
+Coisas:
+```diff
++ text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
+```diff 
+<spawn style="color:red;">ee</span>
+```
+
+$${\color{red}Red}$$
