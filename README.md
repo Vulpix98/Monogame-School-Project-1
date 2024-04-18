@@ -26,11 +26,11 @@ Outros controlos. `R` recomeçar um novo jogo, unicamente no ecrã de fim de jog
 # Correção de erros:
 
 O projeto em si vinha com 3 erros, mas eram do mesmo tipo.
-
+</br>
 O erro estava localizado na pasta `Content\Font` 
-
+</br>
 O problema é que ao dar build o compilador não identificava as fontes.
-
+</br>
 Para resolver apenas baixei a Font neste caso `Bit5x3` e coloquei dentro da pasta onde fica as fontes dei build e problema resolvido.
 
 # Estrutura/Organização
