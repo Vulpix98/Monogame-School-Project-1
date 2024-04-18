@@ -33,7 +33,7 @@ O problema é que ao dar build o compilador não identificava as fontes.
 
 Para resolver apenas baixei a Font neste caso `Bit5x3` e coloquei dentro da pasta onde fica as fontes dei build e problema resolvido.
 
-# Estrutura/Organização
+#Estrutura/Organização
 
 A forma como o código está estruturado, faz com que se torne simples e rápido o seu entendimento, ao ler as várias linhas de código.
 
@@ -47,5 +47,5 @@ Como também a organização das `pastas/ficheiros` de cada classe que represent
 
 ![Screenshot_3](https://github.com/Vulpix98/Monogame-School-Project-1/assets/75589500/a61e14c9-600a-4c74-8f5c-678a194a77e4)
 
-
+<a href="Estrutura/Organização">Teste</a>
 
