@@ -26,27 +26,24 @@ Outros controlos. `R` recomeçar um novo jogo, unicamente no ecrã de fim de jog
 # Correção de erros:
 
 O projeto em si vinha com 3 erros, mas eram do mesmo tipo.
-<br></br>
+
 O erro estava localizado na pasta `Content\Font`.
-<br></br>
+
 O problema é que ao dar build o compilador não identificava as fontes.
-<br></br>
+
 Para resolver apenas baixei a Font neste caso `Bit5x3` e coloquei dentro da pasta onde fica as fontes dei build e problema resolvido.
 
 # Estrutura/Organização
 
 A forma como o código está estruturado, faz com que se torne simples e rápido o seu entendimento, ao ler as várias linhas de código.
-<br></br>
+
 Como também a organização das `pastas/ficheiros` de cada classe que representa cada elemento essencial do jogo, da a sensação de algo limpo.
-<br></br>
+
 <strong>Estrutura das `pastas`</strong>
-<br></br>
 
 ![Screenshot_2](https://github.com/Vulpix98/Monogame-School-Project-1/assets/75589500/1b1eba02-8157-4d9e-9681-0706071ef994)
 
-<br></br>
 <strong>Exemplo de um `ficheiro de código`</strong>
-<br></br>
 
 ![Screenshot_3](https://github.com/Vulpix98/Monogame-School-Project-1/assets/75589500/a61e14c9-600a-4c74-8f5c-678a194a77e4)
 
