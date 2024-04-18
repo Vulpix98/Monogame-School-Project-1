@@ -56,8 +56,4 @@ Coisas:
 # text in gray
 @@ text in purple (and bold)@@
 ```
-```diff 
-<spawn style="color:red;">ee</span>
-```
-
 $${\color{red}Red}$$
