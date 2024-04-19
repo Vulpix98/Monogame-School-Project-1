@@ -263,6 +263,9 @@ public class ScoreManager
 
 Adicionar um pequeno icon de informação para o utilizador saber qual arma está a utilizar no momento, uma vez que, já existe os dois icons das armas no projeto, `Content\Gui`.
 
+![imagem](https://github.com/Vulpix98/Monogame-School-Project-1/assets/75588226/4c2619ad-ac0d-4437-b396-b478ac5a8f46)
+
+
 # Conclusão
 
 Por fim, concluímos este trabalho, o jogo em si é bastante simples em termos de jogabilidade, entender o código em si também foi bastante claro, pois o desenvolvedor criou algo bem estruturado em que tudo é dividido por regiôes tornando tudo mais fácil.
