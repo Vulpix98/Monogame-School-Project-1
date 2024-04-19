@@ -77,12 +77,172 @@ Como podemos ver o tamanho do ecrâ fica assim, e outro fator que podemos falar 
 
 Em que o mesmo é composto por `ENTER = Play` iniciar o jogo, `H = Help` tutorial de como jogar e suas teclas, `C = Credits` fala das pessoas que estiveram envolvidas no `projeto/jogo`, `ESC = Exit` para sair e `M = Menu` caso seja necessário regressaro ao menu. 
 
-Coisas:
-```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
+# Entidades
+
+As `Entidades` são os objetos que vão interagir dentro do cenário, em que elas são:
+<ul>
+ <li><strong>Player</strong></li>
+ <li><strong>Zombie</strong></li>
+ <li><strong>Bullet</strong></li>
+</ul>
+
+<stong>`Player`</strong> é o personagem que vamos controlar para nos defender do ataque, o mesmo só se pode mover para esquerda e direita `A` e `D`, o mesmo possui 2 armas, shotgun e pistola que pode ser trocadas apartir das teclas `Q` e `E`
+
+Nele é difinido o tempo de espera de disparo de cada arma:
+
+```c#
+ #region Consts
+  private const int MAX_PISTOL_COOLDOWN = 30;
+  private const int MAX_SHOTGUN_COOLDOWN = 80;
+ #endregion
 ```
-$${\color{red}Red}$$
+
+<br></br>
+
+<strong>`Zombie`</strong> é o inimigo do jogo, em que o memso vai destruir a fortaleza, o `Zombie` possui 3 tipos um `Basic` normal, `Brute` tem mais vida, mais dano e é mais lento, e por fim `Denizen` tem menos vida, menos dano mas é o mais rápido:
+
+```c#
+ #region Conts
+  // Basic zombie consts
+  private const int BASIC_HEALTH = 40;
+  private const int BASIC_DAMAGE = 12;
+  private const float BASIC_SPEED = 75.0f;
+  
+  // Brute zombie consts
+  private const int BRUTE_HEALTH = 80;
+  private const int BRUTE_DAMAGE = 40;
+  private const float BRUTE_SPEED = 40.0f;
+  
+  // Denizen zombie consts
+  private const int DENIZEN_HEALTH = 20;
+  private const int DENIZEN_DAMAGE = 8;
+  private const float DENIZEN_SPEED = 125.0f;
+ #endregion
+```
+
+Os `Zombies` nascem randomicamente no início do mapa, e possuem um tempo de nascimento, e dependo do tempo a dificuldade do jogo pode aumentar, surgindo o `Zombie Brute` ou `Zombie Denizen`:
+
+A variável `Random` é defenida no ficheiro principal `Game1`:
+
+```c#
+ Random = new Random();
+```
+
+Este codigo define a posição randomica de cada inimigo:
+
+```c#
+  // Reseting the position of the spawner to a new random position
+  Position = m_SpawnPoints[Game1.Random.Next(0, m_SpawnPoints.Count - 1)];
+```
+O código abaixo é o que vai gerir o tempo de nascimento e também se é `Zombie Brute` ou `Zombie Denizen`:
+
+```c#
+ public void Update()
+ {
+     m_Timer++;
+
+     // This timer will define the difficulty of the game.
+     // Once this timer is passed a certain threshold, the zombies will begin to spawn more frequently.
+     m_DifficultyTimer++;
+
+     // The max time will decrease by 10 every 1000 ticks
+     if(m_DifficultyTimer % 1000 == 0)
+         m_MaxTime -= 10;
+
+     if(m_Timer >= m_MaxTime)
+     {
+         // Adding a zombie
+         if(m_SpawnCounter % 10 == 0) SpawnEntity(ZombieType.Brute);
+         else if(m_SpawnCounter % 5 == 0) SpawnEntity(ZombieType.Denizen);
+         else SpawnEntity(ZombieType.Basic);
+         
+         // Reseting the position of the spawner to a new random position
+         Position = m_SpawnPoints[Game1.Random.Next(0, m_SpawnPoints.Count - 1)];
+
+         // Reseting the timer
+         m_Timer = 0;
+
+         // Everytime a zombie spawns this counter will go up.
+         // This will help with selecting which zombie to spawn next turn.
+         // For example, if every 5  there is a brute zombie, and every 3 there is a denizen zombie.
+         m_SpawnCounter++;
+     }
+ }
+```
+
+<br></br>
+
+<strong>`Bullet`</strong> é o objeto que o `Player` vai usar para conseguir se defender dos inimigos, através das armas que o mesmo possui, `pistola` e `shotgun`.
+
+O código abaixo são as variáveis que define o dano e a distância de cada bala de cada arma:
+
+```c#
+  // Pistol consts
+  private const int PISTOL_MAX_DIST = 125;
+  private const int PISTOL_DAMAGE = 20;
+
+  // Shotgun consts
+  private const int SHOTGUN_MAX_DIST = 75;
+  private const int SHOTGUN_DAMAGE = 20;
+```
+
+# Fim/Pontuação 
+
+O jogo em si funciona com base em fazer mais pontos antes da fortaleza ser destruída, em que essa fortaleza tem vida máxima de 400 e quando chegar ao fim dessa vida o jogo termina.
+
+Dependendo de cada inimigo eliminar dá mais pontos ou menos:
+
+<ul>
+ <li>Zombie Basic -> 10</li>
+ <li>Zombie Brute -> 15</li>
+ <li>Zombie Denizen -> 10</li>
+</ul>
+
+```c#
+public class ScoreManager
+{
+    #region Fields
+    public int Score;
+    public int HighScore;
+    #endregion
+
+    #region Constructor
+    public ScoreManager()
+    {
+        Score = 0;
+        HighScore = 0;
+
+        // Subscribing to events
+        Zombie.ScoreIncreaseEvent += OnScoreIncrease;
+    }
+    #endregion
+
+    #region Methods
+    public void Update()
+    {
+        // Setting a new high score if the current score is higher
+        HighScore = Score > HighScore ? Score : HighScore;
+    }
+
+    public void OnScoreIncrease(ZombieType zombieType)
+    {
+        switch(zombieType)
+        {
+            case ZombieType.Basic:
+                Score += 5;
+                break;
+            case ZombieType.Brute:
+                Score += 15;
+                break;
+            case ZombieType.Denizen:
+                Score += 10;
+                break;
+        }
+    }
+    #endregion
+}
+```
+
+# Conclusão
+
+Por fim, concluímos este trabalho, o jogo em si é bastante simples em termos de jogabilidade, entender o código em si também foi bastante claro, pois o desenvolvedor criou algo bem estruturado em que tudo é dividido por regiôes tornando tudo mais fácil.
