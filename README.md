@@ -17,15 +17,13 @@ Um jogo onde deves defender a tua fortaleza contra hordas de zombies que se apro
 
 Todo o jogo é controlado através do teclado, incluído o menu.
 
-Para jogar é utilizado o `WASD` ou `Teclas das setas`. Para mudar de arma `Q` ou `E`, `Q` para a pistola e o `E` para a caçadeira. Para disparar `Espaço`.
-
-No menu, as diferentes opções tem a sua designada tecla ao lado. `Enter` para jogar. `H` para o ecrã de ajuda. `C` para o ecrã de créditos. `ESC` para fechar o jogo, mesmo quando se está a jogar. `M` para voltar para o menu. 
+Para jogar é utilizado o `A` e o `D` ou `Teclas das setas`. Para mudar de arma `Q` ou `E`, `Q` para a pistola e o `E` para a caçadeira. Para disparar `Espaço`.
 
 Outros controlos. `R` recomeçar um novo jogo, unicamente no ecrã de fim de jogo. `P` para colocar o jogo em pausa e retomar de pausa.
 
 # Correção de erros:
 
-O projeto em si vinha com 3 erros, mas eram do mesmo tipo.
+O projeto em si tinha 3 erros, mas eram do mesmo tipo.
 
 O erro estava localizado na pasta `Content\Font`.
 
@@ -37,7 +35,7 @@ Para resolver apenas baixei a Font neste caso `Bit5x3` e coloquei dentro da past
 
 A forma como o código está estruturado, faz com que se torne simples e rápido o seu entendimento, ao ler as várias linhas de código.
 
-Como também a organização das `pastas/ficheiros` de cada classe que representa cada elemento essencial do jogo, da a sensação de algo limpo.
+Como também a organização das `pastas` de cada classe que representa cada elemento essencial do jogo, da a sensação de algo limpo.
 
 <strong>Estrutura das `pastas`</strong>
 
@@ -49,9 +47,9 @@ Como também a organização das `pastas/ficheiros` de cada classe que represent
 
 # Fatores do Jogo
 
-A primeira coisa que reparei acerca do jogo foi o tamanho do ecrâ que era relativamente pequeno, mas tem o seu proposito.
+A primeira coisa que reparámos acerca do jogo foi o tamanho do ecrã que era relativamente pequeno, mas tem o seu propósito.
 
-O tamanho do ecrâ é definido por `2 variaveis, com valores inteiros`, ou seja, não é algo que se ajusta automaticamente consoante o nivel ou outra coisa.
+O tamanho do ecrã é definido por `2 variáveis, com valores inteiros`, ou seja, não é algo que se ajusta automaticamente consoante o nível ou outra coisa.
 
 ```c#
  protected override void Initialize()
@@ -73,22 +71,22 @@ O tamanho do ecrâ é definido por `2 variaveis, com valores inteiros`, ou seja,
 
 ![Screenshot_2](https://github.com/Vulpix98/Monogame-School-Project-1/assets/75589500/1fcf1a35-299c-4f29-b91d-ce8be23857d9)
 
-Como podemos ver o tamanho do ecrâ fica assim, e outro fator que podemos falar em relação a esta imagem é o `menu`.
+Como podemos ver o tamanho do ecrã fica assim, e outro fator que podemos falar em relação a esta imagem é o `menu`.
 
-Em que o mesmo é composto por `ENTER = Play` iniciar o jogo, `H = Help` tutorial de como jogar e suas teclas, `C = Credits` fala das pessoas que estiveram envolvidas no `projeto/jogo`, `ESC = Exit` para sair e `M = Menu` caso seja necessário regressaro ao menu. 
+Em que o mesmo é composto por `ENTER = Play` iniciar o jogo, `H = Help` tutorial de como jogar e suas teclas, `C = Credits` dá crédito às pessoas que fizeram os sons e texturas, `ESC = Exit` para sair e `M = Menu` caso seja necessário regressar ao menu. 
 
 # Entidades
 
-As `Entidades` são os objetos que vão interagir dentro do cenário, em que elas são:
+As `Entities` são os objetos que vão interagir dentro do cenário, nos quais são:
 <ul>
  <li><strong>Player</strong></li>
  <li><strong>Zombie</strong></li>
  <li><strong>Bullet</strong></li>
 </ul>
 
-<stong>`Player`</strong> é o personagem que vamos controlar para nos defender do ataque, o mesmo só se pode mover para esquerda e direita `A` e `D`, o mesmo possui 2 armas, shotgun e pistola que pode ser trocadas apartir das teclas `Q` e `E`
+<stong>`Player`</strong> é a personagem que vamos controlar para nos defender do ataque, o mesmo só se pode mover para esquerda e direita `A` e `D`, o mesmo possui 2 armas, caçadeira e pistola que pode ser trocadas apartir das teclas `Q` e `E`
 
-Nele é difinido o tempo de espera de disparo de cada arma:
+Nele é definido o tempo de espera de disparo de cada arma:
 
 ```c#
  #region Consts
@@ -99,7 +97,14 @@ Nele é difinido o tempo de espera de disparo de cada arma:
 
 <br></br>
 
-<strong>`Zombie`</strong> é o inimigo do jogo, em que o memso vai destruir a fortaleza, o `Zombie` possui 3 tipos um `Basic` normal, `Brute` tem mais vida, mais dano e é mais lento, e por fim `Denizen` tem menos vida, menos dano mas é o mais rápido:
+<strong>`Zombie`</strong> é o inimigo do jogo, em que o mesmo vai destruir a fortaleza.
+
+Ele possui 3 tipos:
+<ul>
+    <li><strong>Basic</strong> - normal;</li>
+    <li><strong>Brute</strong> - tem mais vida, mais dano e é mais lento;</li>
+    <li><strong>Denizen</strong> - tem menos vida, menos dano mas é o mais rápido.</li>
+</ul>
 
 ```c#
  #region Conts
@@ -120,15 +125,15 @@ Nele é difinido o tempo de espera de disparo de cada arma:
  #endregion
 ```
 
-Os `Zombies` nascem randomicamente no início do mapa, e possuem um tempo de nascimento, e dependo do tempo a dificuldade do jogo pode aumentar, surgindo o `Zombie Brute` ou `Zombie Denizen`:
+Os `Zombies` nascem aleatoriamente no início do mapa, e possuem um tempo de nascimento, e dependendo do tempo a dificuldade do jogo aumenta, surgindo o `Zombie Brute` ou `Zombie Denizen`:
 
-A variável `Random` é defenida no ficheiro principal `Game1`:
+A variável `Random` é definida no ficheiro principal `Game1`:
 
 ```c#
  Random = new Random();
 ```
 
-Este codigo define a posição randomica de cada inimigo:
+Este código define a posição aleatória de cada inimigo:
 
 ```c#
   // Reseting the position of the spawner to a new random position
@@ -172,9 +177,9 @@ O código abaixo é o que vai gerir o tempo de nascimento e também se é `Zombi
 
 <br></br>
 
-<strong>`Bullet`</strong> é o objeto que o `Player` vai usar para conseguir se defender dos inimigos, através das armas que o mesmo possui, `pistola` e `shotgun`.
+<strong>`Bullet`</strong> é o objeto que o `Player` vai usar para conseguir se defender dos inimigos, através das armas que o mesmo possui, `pistola` e `caçadeira`. A pistola dispara unicamente 1 bala, já a caçadeira dispara 3.
 
-O código abaixo são as variáveis que define o dano e a distância de cada bala de cada arma:
+O código abaixo são as variáveis que define o dano e a eficácia máxima de cada bala conforme a distância de cada arma:
 
 ```c#
   // Pistol consts
@@ -188,12 +193,23 @@ O código abaixo são as variáveis que define o dano e a distância de cada bal
 
 # Fim/Pontuação 
 
-O jogo em si funciona com base em fazer mais pontos antes da fortaleza ser destruída, em que essa fortaleza tem vida máxima de 400 e quando chegar ao fim dessa vida o jogo termina.
+O jogo em si funciona com base em fazer mais pontos antes da fortaleza ser destruída, em que essa fortaleza tem vida máxima de 400 e quando chegar a 0 o jogo termina.
 
-Dependendo de cada inimigo eliminar dá mais pontos ou menos:
+```c#
+public int BarricadeHealth = 400;
+
+public void OnBarricadeCollision(Zombie zombie)
+{
+    BarricadeHealth -= zombie.Damage;
+
+    zombie.Velocity = new Vector2(0.0f, 0.0f);
+}
+```
+
+Dependendo de cada inimigo ao eliminar dá mais pontos ou menos:
 
 <ul>
- <li>Zombie Basic -> 10</li>
+ <li>Zombie Basic -> 5</li>
  <li>Zombie Brute -> 15</li>
  <li>Zombie Denizen -> 10</li>
 </ul>
@@ -242,6 +258,10 @@ public class ScoreManager
     #endregion
 }
 ```
+
+# Sugestões de melhorias
+
+Adicionar um pequeno icon de informação para o utilizador saber qual arma está a utilizar no momento, uma vez que, já existe os dois icons das armas no projeto, `Content\Gui`.
 
 # Conclusão
 
