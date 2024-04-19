@@ -47,6 +47,35 @@ Como também a organização das `pastas/ficheiros` de cada classe que represent
 
 ![Screenshot_3](https://github.com/Vulpix98/Monogame-School-Project-1/assets/75589500/a61e14c9-600a-4c74-8f5c-678a194a77e4)
 
+# Fatores do Jogo
+
+A primeira coisa que reparei acerca do jogo foi o tamanho do ecrâ que era relativamente pequeno, mas tem o seu proposito.
+
+O tamanho do ecrâ é definido por `2 variaveis, com valores inteiros`, ou seja, não é algo que se ajusta automaticamente consoante o nivel ou outra coisa.
+
+```c#
+ protected override void Initialize()
+ {
+     // Utility variables init
+     ScreenWidth = 384;
+     ScreenHeight = 512;
+     Random = new Random();
+
+     // Changing the game window size
+     _graphics.PreferredBackBufferWidth = ScreenWidth;
+     _graphics.PreferredBackBufferHeight = ScreenHeight;
+
+     _graphics.ApplyChanges();
+
+     base.Initialize();
+ }
+```
+
+![Screenshot_2](https://github.com/Vulpix98/Monogame-School-Project-1/assets/75589500/1fcf1a35-299c-4f29-b91d-ce8be23857d9)
+
+Como podemos ver o tamanho do ecrâ fica assim, e outro fator que podemos falar em relação a esta imagem é o `menu`.
+
+Em que o mesmo é composto por `ENTER = Play` iniciar o jogo, `H = Help` tutorial de como jogar e suas teclas, `C = Credits` fala das pessoas que estiveram envolvidas no `projeto/jogo`, `ESC = Exit` para sair e `M = Menu` caso seja necessário regressaro ao menu. 
 
 Coisas:
 ```diff
